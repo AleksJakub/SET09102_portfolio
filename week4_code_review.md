@@ -1,25 +1,45 @@
-# Code review
+```
+Car
+{
+  public string model;
 
-This section documents your practical work from week 4 in which you attempt a series of 
-code review challenges. For your portfolio, do the following:
+  // Class constructor
+  public Car()
+  {
+    model = "Mustang"; // Set the initial value for model
+  }
 
-1. Choose the code review challenge which best demonstrates your skills.
-2. Copy the code into your portfolio using a Markdown
-   [fenced code block](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks).
-3. Provide some descriptive commentary that identifies the problems.
-4. Show your improved version of the code in a second code block.
-5. Explain in one or more paragraphs why your solution is a good one.
+  static void Main(string[] args)
+  {
+    Car Ford = new Car();
+    Console.WriteLine(Ford.model);
+  }
+}
+```
+There are a number of places where the provided code might be modified to increase readability and maintainability. First of all, the code is devoid of comments, which makes it challenging for anyone viewing the code to fully understand its goal and the reasoning behind each step. It's difficult to understand the importance of the Car class, its constructor, and the Main method in the absence of comments. Additionally, the variable names are short, but they may still need be more descriptive to properly communicate their function.
 
-**DO**
+```
+//car class represents a car object with a model property
+class Car
+{
+    //public property to store the car model information
+    public string Model; 
 
-* Use grammatically correct sentences and paragraphs for your commentary.
-* Make clear reference to the code in your commentary. GitHub Markdown does not support
-  line numbers and so you need to make sure that the reader knows which line you are
-  referring to from your description.
-* Refer to recognised principles or rules when describing your solution. "I thought it
-  would be better that way" is not sufficient: you need to have specific reasons.
+    //class constructor initializes the model property
+    public Car()
+    {
+        Model = "Mustang"; //set the initial value for the car model
+    }
 
-**DON'T**
+    static void Main(string[] args)
+    {
+        //create a new Car object called Ford using the Car class constructor
+        Car Ford = new Car();
 
-* Include multiple examples. Make the decision about which example shows your best
-  work and use that one.
+        //output the model of the Ford car
+        Console.WriteLine("Car Model: " + Ford.Model);
+    }
+}
+```
+
+To clearly explain the function of the Car class, its constructor, and the Main method, I have added comments to the code in the revised version. It becomes easier to read and maintain the code by adding descriptive comments that improve readability. These improvements support easier debugging and future updates while also improving the code's accessibility to other developers.
